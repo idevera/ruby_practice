@@ -7,6 +7,12 @@ puts "Please enter a password"
 
 ## LOOP UNTIL ALL CONDITIONS ARE MET
 until greater_than_8 == true && did_i_see_a_num == true && did_i_see_a_symb == true && did_i_see_a_char == true
+
+  greater_than_8 = false
+  did_i_see_a_num = false
+  did_i_see_a_symb = false
+  did_i_see_a_char = false
+
   # Get password input from user
   password = gets.chomp.upcase.split("")
 
