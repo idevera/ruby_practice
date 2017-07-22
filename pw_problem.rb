@@ -5,19 +5,19 @@ did_i_see_a_char = false
 
 puts "Please enter a password"
 
+## LOOP UNTIL ALL CONDITIONS ARE MET
 until greater_than_8 == true && did_i_see_a_num == true && did_i_see_a_symb == true && did_i_see_a_char == true
   # Get password input from user
   password = gets.chomp.upcase.split("")
 
-## LOOP TO FIND AT LEAST 8 CHARACTERS
-# If password is greater than 8 characters run code. Keep looping until you get the password you want!
+  ## LOOP TO FIND AT LEAST 8 CHARACTERS
+  # If password is greater than 8 characters run code. Keep looping until you get the password you want!
   if password.length < 7
     puts
     puts "Please input a password that is at least 8 characters long"
     next
   else
     greater_than_8 = true
-    # password = gets.chomp.split("")
   end
 
   ## ENTIRE LOOP TO FIND A NUMBER
@@ -74,7 +74,8 @@ until greater_than_8 == true && did_i_see_a_num == true && did_i_see_a_symb == t
   # LOOP TO UNTIL ONE CHARACTER IS FOUND
   until did_i_see_a_char == true
     password.each do |char|
-      if char.count("a-zA-Z") > 0
+      # Character of password array will be checked against all letters
+      if char.count("A-Z") > 0
         did_i_see_a_char = true
       # Will break each do loop
         break
@@ -96,4 +97,4 @@ until greater_than_8 == true && did_i_see_a_num == true && did_i_see_a_symb == t
   end
 end
 puts
-puts "Thank you for entering a valid password"
+puts "====== Thank you for entering a valid password ======"
