@@ -7,7 +7,7 @@ puts "Please enter five names"
 end
 
 i = 0
-until all_names[i] == all_names.length
-  print all_names[i]
+until  all_names.length == i
+  print all_names[i] + " "
   i += 1
 end
